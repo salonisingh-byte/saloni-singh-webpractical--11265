@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show Hide Demo</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    .highlight {
+      color: white;
+      background-color: blue;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="text">This is a paragraph</p>
+
+  <button onclick="toggleText()">Show / Hide</button>
+  <button onclick="toggleStyle()">Toggle Style</button>
+
+  <script>
+    function toggleText() {
+      document.getElementById("text").classList.toggle("hidden");
+    }
+
+    function toggleStyle() {
+      document.getElementById("text").classList.toggle("highlight");
+    }
+  </script>
+
+</body>
+</html>

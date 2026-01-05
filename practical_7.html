@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced CSS Styling</title>
+
+  <style>
+    /* ---------- BODY STYLING ---------- */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    /* ---------- HEADER SECTION ---------- */
+    header {
+      background-image: url('flower.jpg');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      color: maroon;
+      padding: 80px 20px;
+      border-bottom: 5px solid #333;
+    }
+
+    header h1 {
+      font-size: 50px;
+      margin: 0;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    /* ---------- CONTENT BOX (Box Model Example) ---------- */
+    .content-box {
+      width: 80%;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      border: 3px solid #555;
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .content-box h2 {
+      text-align: center;
+      color: #333;
+      text-decoration: underline;
+    }
+
+    .content-box p {
+      line-height: 1.6;
+      color: #333;
+      text-align: justify;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: aqua;
+      background-color: #333;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Welcome to my stylish page</h1>
+  </header>
+
+  <div class="content-box">
+    <h2>About this page</h2>
+    <p>
+      This page demonstrates advanced CSS styling using the 
+      <strong>box model</strong>, 
+      <strong>background images</strong>, 
+      <strong>borders</strong>, 
+      <strong>margins</strong>, and 
+      <strong>padding</strong>. 
+      The content box is centered and has padding inside the box, 
+      a border surrounding it, and margin separating it from other elements.
+    </p>
+
+    <p>
+      The header uses a background image with <em>cover</em> and <em>center</em> 
+      to make it visually appealing. Shadows and border-radius add a modern 
+      look to the content box.
+    </p>
+  </div>
+
+  <footer>
+    by Saloni Singh
+  </footer>
+
+</body>
+</html>

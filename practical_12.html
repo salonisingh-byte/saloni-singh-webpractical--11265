@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Conditions and Loops</title>
+</head>
+<body>
+
+<h2>JavaScript Conditional Statements & Loops</h2>
+<button onclick="runDemo()">Run Demo</button>
+
+<p id="output"></p>
+
+<script>
+function runDemo() {
+    let output = "";
+
+    // ----- IF STATEMENT -----
+    let num = 15;
+    if (num > 10) {
+        output += "If: Number is greater than 10<br>";
+    }
+
+    // ----- IF ELSE -----
+    if (num % 2 === 0) {
+        output += "If-Else: Number is even<br>";
+    } else {
+        output += "If-Else: Number is odd<br>";
+    }
+
+    // ----- ELSE IF LADDER -----
+    let marks = 78;
+    if (marks >= 90) {
+        output += "Else-If: Grade A<br>";
+    } else if (marks >= 75) {
+        output += "Else-If: Grade B<br>";
+    } else if (marks >= 60) {
+        output += "Else-If: Grade C<br>";
+    } else {
+        output += "Else-If: Fail<br>";
+    }
+
+    // ----- SWITCH CASE -----
+    let day = 3;
+    switch (day) {
+        case 1:
+            output += "Switch: Monday<br>";
+            break;
+        case 2:
+            output += "Switch: Tuesday<br>";
+            break;
+        case 3:
+            output += "Switch: Wednesday<br>";
+            break;
+        default:
+            output += "Switch: Invalid day<br>";
+    }
+
+    // ----- FOR LOOP -----
+    output += "<br>For Loop (1 to 5): ";
+    for (let i = 1; i <= 5; i++) {
+        output += i + " ";
+    }
+
+    // ----- WHILE LOOP -----
+    output += "<br>While Loop (1 to 5): ";
+    let j = 1;
+    while (j <= 5) {
+        output += j + " ";
+        j++;
+    }
+
+    // ----- DO WHILE LOOP -----
+    output += "<br>Do-While Loop (1 to 5): ";
+    let k = 1;
+    do {
+        output += k + " ";
+        k++;
+    } while (k <= 5);
+
+    document.getElementById("output").innerHTML = output;
+}
+</script>
+
+</body>
+</html>

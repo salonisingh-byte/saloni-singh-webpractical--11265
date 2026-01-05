@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulation</title>
+</head>
+<body>
+
+  <div id="container">
+    <p>Existing Paragraph</p>
+  </div>
+
+  <button id="add">Add Element</button>
+  <button id="remove">Remove Last Element</button>
+  <button id="modify">Modify First Element</button>
+
+  <script>
+    const container = document.getElementById("container");
+
+    // Append (create + add)
+    document.getElementById("add").addEventListener("click", function () {
+      const newPara = document.createElement("p");
+      newPara.innerHTML = "New Paragraph Added";
+      container.appendChild(newPara);
+    });
+
+    // Remove
+    document.getElementById("remove").addEventListener("click", function () {
+      if (container.lastElementChild) {
+        container.removeChild(container.lastElementChild);
+      }
+    });
+
+    // Modify
+    document.getElementById("modify").addEventListener("click", function () {
+      if (container.firstElementChild) {
+        container.firstElementChild.innerHTML = "First paragraph modified";
+      }
+    });
+  </script>
+
+</body>
+</html>

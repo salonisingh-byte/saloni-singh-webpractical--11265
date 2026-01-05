@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Web Page</title>
+  <style>
+    /* -------------------- Base (Mobile First) -------------------- */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: #0073e6;
+      color: white;
+      text-align: center;
+      padding: 1.5em 1em;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #f4f4f4;
+      padding: 1em 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0073e6;
+      margin: 0.5em 0;
+      font-size: 1.1em;
+    }
+
+    .container {
+      padding: 1em;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .card {
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 1em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #0073e6;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+    }
+
+    /* -------------------- Tablet (min-width: 600px) -------------------- */
+    @media (min-width: 600px) {
+      nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2em;
+      }
+
+      .content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .card {
+        width: 45%;
+      }
+    }
+
+    /* -------------------- Desktop (min-width: 900px) -------------------- */
+    @media (min-width: 900px) {
+      header {
+        font-size: 1.5rem;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .card {
+        width: 30%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Responsive Web Page</h1>
+    <p>Mobile-first design using flexible units</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section class="content">
+      <div class="card">
+        <h2>About Us</h2>
+        <p>We create modern, responsive, and user-friendly web experiences that adapt beautifully to any screen size.</p>
+      </div>
+      <div class="card">
+        <h2>Our Services</h2>
+        <p>From website design to mobile app development — we provide digital solutions that bring ideas to life.</p>
+      </div>
+      <div class="card">
+        <h2>Contact</h2>
+        <p>Reach out to us anytime — we’d love to collaborate and build something great together!</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Responsive Design Co. | Designed with ❤️</p>
+  </footer>
+
+</body>
+</html>
